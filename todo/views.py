@@ -6,3 +6,6 @@ def addtask(request):
     task=request.POST['task']
     Task.objects.create( task=task,)
     return redirect('homepage')
+
+def mark_as_done(request,pk):
+    return HttpResponse(pk)
